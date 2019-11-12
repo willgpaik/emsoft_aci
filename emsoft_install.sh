@@ -16,10 +16,10 @@ tar -xf v5.0.0.tar.gz
 cd EMsoftSuperbuild-5.0.0/
 mkdir build
 cd build
-cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DINSTALL_QT5=ON
-make
+cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release
+make -j 2
 sed -i "s|/usr/bin/f95|/opt/rh/devtoolset-4/root/usr/bin/gfortran|g" $BUILDDIR/EMsoft_SDK/superbuild/jsonfortran/Build/Release/CMakeCache.txt
-make -j 2 && make
+make -j 2
 
 cd $TMPDIR
 
