@@ -2,7 +2,6 @@ set +e
 
 mkdir -p $PWD/emsoft
 mkdir -p $PWD/emtmp
-mkdir -p $PWD/cmake_build
 
 BASE=$PWD
 BUILDDIR=$BASE/emsoft
