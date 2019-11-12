@@ -36,7 +36,7 @@ cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release \
 -Djsonfortran-gnu_DIR=$BUILDDIR/EMsoft_SDK/jsonfortran-4.2.1-Release/lib64/cmake/jsonfortran-gnu-4.2.1/ \
 -DFFTW3_INSTALL=$BUILDDIR/EMsoft_SDK/fftw-3.3.8 \
 -DCLFortran_DIR=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
--DQt5Svg_DIR=$BUILDDIR/lib64
+-DBUILD_SHARED_LIBS=ON
 make -j 2
 
 cd $BASE
