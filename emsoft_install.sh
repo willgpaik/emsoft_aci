@@ -13,11 +13,10 @@ cd $TMPDIR
 wget https://github.com/EMsoft-org/EMsoftSuperbuild/archive/v5.0.0.tar.gz
 tar -xf v5.0.0.tar.gz 
 cd EMsoftSuperbuild-5.0.0/
+sed -i '59 a -DCMAKE_Fortran_COMPILER=/opt/rh/devtoolset-8/root/usr/bin/gfortran' ./projects/JsonFortran.cmake
 mkdir build
 cd build
 cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release
-make -j 2
-sed -i "s|/usr/bin/f95|/opt/rh/devtoolset-8/root/usr/bin/gfortran|g" $BUILDDIR/EMsoft_SDK/superbuild/jsonfortran/Build/Release/CMakeCache.txt
 make -j 2
 
 cd $TMPDIR
