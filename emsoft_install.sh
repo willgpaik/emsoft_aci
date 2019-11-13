@@ -29,7 +29,7 @@ cd EMsoft-5.0.0/
 sed -i "s|git@github.com:EMsoft-org/SHTfile.git|https://github.com/EMsoft-org/SHTfile.git|g" CMakeLists.txt
 mkdir build
 cd build
-cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release \
+cmake .. -DEMsoft_SDK=$BUILDDIR/EMSoft_SDK -DCMAKE_BUILD_TYPE=Release \
 -DHDF5_DIR=$BUILDDIR/EMsoft_SDK/hdf5-1.8.20-Release/share/cmake \
 -Djsonfortran-gnu_DIR=$BUILDDIR/EMsoft_SDK/jsonfortran-4.2.1-Release/lib64/cmake/jsonfortran-gnu-4.2.1/ \
 -DFFTW3_INSTALL=$BUILDDIR/EMsoft_SDK/fftw-3.3.8 \
