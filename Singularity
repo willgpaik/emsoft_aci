@@ -10,9 +10,7 @@ From: willgpaik/qt5_aci:qt5
 %runscript
 
 %post
-    yum -y install opencl-devel \
-      lapack-devel
-      blas-devel
+    yum -y install lapack-devel blas-devel
       
     source /opt/rh/devtoolset-8
     export PATH=/usr/local/Qt-5.12.5/bin:/usr/local/bin:$PATH
