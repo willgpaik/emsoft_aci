@@ -16,7 +16,9 @@ cd EMsoftSuperbuild-5.0.0/
 sed -i '59 a -DCMAKE_Fortran_COMPILER=/opt/rh/devtoolset-8/root/usr/bin/gfortran' ./projects/JsonFortran.cmake
 mkdir build
 cd build
-cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release
+# emsoft workbench is disabled to make life easier:
+# https://github.com/EMsoft-org/EMsoftSuperbuild/issues/11
+cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DEMsoft_ENABLE_EMsoftWorkbench=OFF
 make -j 2
 
 cd $TMPDIR
@@ -27,6 +29,7 @@ wget https://github.com/EMsoft-org/EMsoft/archive/v5.0.0.tar.gz
 tar -xf v5.0.0.tar.gz
 cd EMsoft-5.0.0/
 sed -i "s|git@github.com:EMsoft-org/SHTfile.git|https://github.com/EMsoft-org/SHTfile.git|g" CMakeLists.txt
+sed -i "s|https://github.com/emsoft-org/EMsoftData|https://github.com/EMsoft-org/EMsoftData.git|g" Source/Test/CMakeLists.txt
 mkdir build
 cd build
 cmake .. -DEMsoft_SDK=$BUILDDIR/EMSoft_SDK -DCMAKE_BUILD_TYPE=Release \
@@ -34,7 +37,9 @@ cmake .. -DEMsoft_SDK=$BUILDDIR/EMSoft_SDK -DCMAKE_BUILD_TYPE=Release \
 -Djsonfortran-gnu_DIR=$BUILDDIR/EMsoft_SDK/jsonfortran-4.2.1-Release/lib64/cmake/jsonfortran-gnu-4.2.1/ \
 -DFFTW3_INSTALL=$BUILDDIR/EMsoft_SDK/fftw-3.3.8 \
 -DCLFortran_DIR=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
--DBUILD_SHARED_LIBS=ON
+-Dbcls_DIR=$BUILDDIR/EMsoft_SDK/bcls-0.1-Release/lib/cmake/bcls \
+-DBUILD_SHARED_LIBS=ON \
+-DEMsoft_ENABLE_EMsoftWorkbench=OFF
 make -j 2
 
 cd $BASE
