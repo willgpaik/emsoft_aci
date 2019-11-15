@@ -43,7 +43,7 @@ cmake .. -DEMsoft_SDK=$BUILDDIR/EMSoft_SDK -DCMAKE_BUILD_TYPE=Release \
 -DHDF5_DIR=$BUILDDIR/EMsoft_SDK/hdf5-1.8.20-Release/share/cmake \
 -Djsonfortran-gnu_DIR=$BUILDDIR/EMsoft_SDK/jsonfortran-4.2.1-Release/lib64/cmake/jsonfortran-gnu-4.2.1/ \
 -DFFTW3_INSTALL=$BUILDDIR/EMsoft_SDK/fftw-3.3.8 \
--CLFortran=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
+-DCLFortran=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
 -Dbcls_DIR=$BUILDDIR/EMsoft_SDK/bcls-0.1-Release/lib/cmake/bcls \
 -DBUILD_SHARED_LIBS=ON \
 -DEMsoft_ENABLE_EMsoftWorkbench=OFF \
