@@ -24,6 +24,10 @@ make -j 2
 cd $TMPDIR
 
 mkdir -p $BUILDDIR/EMsoftData
+cd $BUILDDIR/EMsoftData
+git clone https://github.com/EMsoft-org/EMsoftData.git
+
+cd $TMPDIR
 
 # install EMsoft
 rm v5.0.0.tar.gz
