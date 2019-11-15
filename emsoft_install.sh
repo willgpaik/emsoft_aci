@@ -39,7 +39,8 @@ cmake .. -DEMsoft_SDK=$BUILDDIR/EMSoft_SDK -DCMAKE_BUILD_TYPE=Release \
 -DCLFortran_DIR=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
 -Dbcls_DIR=$BUILDDIR/EMsoft_SDK/bcls-0.1-Release/lib/cmake/bcls \
 -DBUILD_SHARED_LIBS=ON \
--DEMsoft_ENABLE_EMsoftWorkbench=OFF
+-DEMsoft_ENABLE_EMsoftWorkbench=OFF \
+-DCLFortran_LIB_PATH=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib
 make -j 2
 
 cd $BASE
