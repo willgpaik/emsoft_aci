@@ -6,3 +6,7 @@ Singularity recipe for EMSoft on Centos 7 for ICDS ACI clusters
 
 2019/11/13  
 Workbench installation is turned off -> Qt not needed anymore
+
+2019/11/15  
+Base image changed to Centos7 instead of Qt5  
+OpenCL package is added
