@@ -1,5 +1,5 @@
 Boostrap: shub
-From: willgpaik/qt5_aci:qt5
+From: willgpaik/centos7_aci
 
 %setup
 
@@ -10,7 +10,7 @@ From: willgpaik/qt5_aci:qt5
 %runscript
 
 %post
-    yum -y install lapack-devel blas-devel
+    yum -y install lapack-devel blas-devel ocl-icd-devel
       
     source /opt/rh/devtoolset-8
     export PATH=/usr/local/Qt-5.12.5/bin:/usr/local/bin:$PATH
