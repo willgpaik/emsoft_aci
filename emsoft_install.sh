@@ -23,6 +23,8 @@ make -j 2
 
 cd $TMPDIR
 
+mkdir -p $BUILDDIR/EMsoftData
+
 # install EMsoft
 rm v5.0.0.tar.gz
 wget https://github.com/EMsoft-org/EMsoft/archive/v5.0.0.tar.gz
