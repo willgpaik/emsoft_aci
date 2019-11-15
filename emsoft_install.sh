@@ -23,8 +23,7 @@ make -j 2
 
 cd $TMPDIR
 
-mkdir -p $BUILDDIR/EMsoftData
-cd $BUILDDIR/EMsoftData
+cd $BUILDDIR
 git clone https://github.com/EMsoft-org/EMsoftData.git
 cd EMsoftData
 git pull origin develop
