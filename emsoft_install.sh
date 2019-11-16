@@ -28,6 +28,8 @@ git clone https://github.com/EMsoft-org/EMsoftData.git
 cd EMsoftData
 git pull origin develop
 
+sed -i "s|jsonfortran-4.2.1-${BUILD_TYPE}/lib|jsonfortran-4.2.1-${BUILD_TYPE}/lib64|g" $BUILDDIR/EMsoft_SDK/EMsoft_SDK.cmake
+
 cd $TMPDIR
 
 # install EMsoft
