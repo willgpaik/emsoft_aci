@@ -39,15 +39,7 @@ sed -i "s|git@github.com:EMsoft-org/SHTfile.git|https://github.com/EMsoft-org/SH
 sed -i "s|https://github.com/emsoft-org/EMsoftData|https://github.com/EMsoft-org/EMsoftData.git|g" Source/Test/CMakeLists.txt
 mkdir build
 cd build
-cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release \
-#-DHDF5_DIR=$BUILDDIR/EMsoft_SDK/hdf5-1.8.20-Release/share/cmake \
-#-Djsonfortran-gnu_DIR=$BUILDDIR/EMsoft_SDK/jsonfortran-4.2.1-Release/lib64/cmake/jsonfortran-gnu-4.2.1/ \
-#-DFFTW3_INSTALL=$BUILDDIR/EMsoft_SDK/fftw-3.3.8 \
-#-DCLFortran_DIR=$BUILDDIR/EMsoft_SDK/CLFortran-0.0.1-Release/lib/cmake/CLFortran \
-#-Dbcls_DIR=$BUILDDIR/EMsoft_SDK/bcls-0.1-Release/lib/cmake/bcls \
--DBUILD_SHARED_LIBS=ON \
--DEMsoft_ENABLE_EMsoftWorkbench=OFF \
--DEMsoftData_DIR=$BUILDDIR/EMsoftData
+cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DEMsoft_ENABLE_EMsoftWorkbench=OFF -DEMsoftData_DIR=$BUILDDIR/EMsoftData
 make -j 2
 
 cd $BASE
