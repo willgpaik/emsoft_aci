@@ -23,10 +23,10 @@ make -j 2
 
 cd $TMPDIR
 
-cd $BUILDDIR
-git clone https://github.com/EMsoft-org/EMsoftData.git
-cd EMsoftData
-git pull origin develop
+#cd $BUILDDIR
+#git clone https://github.com/EMsoft-org/EMsoftData.git
+#cd EMsoftData
+#git pull origin develop
 
 sed -i "s|lib/cmake/jsonfortran-gnu-4.2.1|lib64/cmake/jsonfortran-gnu-4.2.1|g" $BUILDDIR/EMsoft_SDK/EMsoft_SDK.cmake
 
@@ -41,7 +41,7 @@ sed -i "s|git@github.com:EMsoft-org/SHTfile.git|https://github.com/EMsoft-org/SH
 sed -i "s|https://github.com/emsoft-org/EMsoftData|https://github.com/EMsoft-org/EMsoftData.git|g" Source/Test/CMakeLists.txt
 mkdir build
 cd build
-cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DEMsoft_ENABLE_EMsoftWorkbench=OFF -DEMsoftData_DIR=$BUILDDIR/EMsoftData
+cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DEMsoft_ENABLE_EMsoftWorkbench=OFF# -DEMsoftData_DIR=$BUILDDIR/EMsoftData
 make -j 2
 
 cd $BASE
