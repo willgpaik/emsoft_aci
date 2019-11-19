@@ -45,6 +45,7 @@ mkdir build
 cd build
 cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DEMsoft_ENABLE_EMsoftWorkbench=OFF -DEMsoftData_DIR=$BUILDDIR/EMsoftData
 make -j 2
+make install
 
 cd $BASE
 rm -rf $TMPDIR
