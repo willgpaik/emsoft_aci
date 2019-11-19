@@ -11,11 +11,12 @@ From: willgpaik/centos7_aci
 
 %post
     yum -y install lapack-devel blas-devel ocl-icd-devel
-      
-    source /opt/rh/devtoolset-8
+    
+    source /opt/rh/devtoolset-8/enable
     
     set +e
     
+    mkdir -p /opt/sw
     cd /opt/sw
     wget https://raw.githubusercontent.com/willgpaik/emsoft_aci/master/emsoft_install.sh
     chmod +x emsoft_install.sh
