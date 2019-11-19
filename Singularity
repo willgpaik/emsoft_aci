@@ -12,12 +12,13 @@ From: willgpaik/centos7_aci
 %post
     yum -y install lapack-devel blas-devel ocl-icd-devel
     
+    set +e
+
+    
     source /opt/rh/devtoolset-8/enable
     
     export PATH=/usr/local/bin
-    
-    set +e
-    
+        
     mkdir -p /opt/sw
     cd /opt/sw
     
