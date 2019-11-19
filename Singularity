@@ -1,4 +1,4 @@
-Boostrap: shub
+Bootstrap: shub
 From: willgpaik/centos7_aci
 
 %setup
