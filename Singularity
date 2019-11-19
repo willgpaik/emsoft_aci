@@ -13,9 +13,6 @@ From: willgpaik/centos7_aci
     yum -y install lapack-devel blas-devel ocl-icd-devel
       
     source /opt/rh/devtoolset-8
-    export PATH=/usr/local/Qt-5.12.5/bin:/usr/local/bin:$PATH
-    export LD_LIBRARY_PATH=/usr/local/Qt-5.12.5/lib:$LD_LIBRARY_PATH
-    export CPATH=/usr/local/Qt-5.12.5/include:$CPATH
     
     set +e
     
