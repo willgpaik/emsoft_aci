@@ -17,7 +17,7 @@ From: willgpaik/centos7_aci
     
     source /opt/rh/devtoolset-8/enable
     
-    export PATH=/usr/local/bin
+    export PATH=/usr/local/bin:$PATH
         
     mkdir -p /opt/sw
     cd /opt/sw
