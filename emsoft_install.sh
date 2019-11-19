@@ -33,10 +33,12 @@ sed -i "s|lib/cmake/jsonfortran-gnu-4.2.1|lib64/cmake/jsonfortran-gnu-4.2.1|g" $
 cd $TMPDIR
 
 # install EMsoft
-rm v5.0.0.tar.gz
-wget https://github.com/EMsoft-org/EMsoft/archive/v5.0.0.tar.gz
-tar -xf v5.0.0.tar.gz
-cd EMsoft-5.0.0/
+#rm v5.0.0.tar.gz
+#wget https://github.com/EMsoft-org/EMsoft/archive/v5.0.0.tar.gz
+#tar -xf v5.0.0.tar.gz
+#cd EMsoft-5.0.0/
+git clone https://github.com/EMsoft-org/EMsoft.git
+cd EMsoft
 sed -i "s|git@github.com:EMsoft-org/SHTfile.git|https://github.com/EMsoft-org/SHTfile.git|g" CMakeLists.txt
 sed -i "s|https://github.com/emsoft-org/EMsoftData|https://github.com/EMsoft-org/EMsoftData.git|g" Source/Test/CMakeLists.txt
 mkdir build
