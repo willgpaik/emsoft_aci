@@ -47,4 +47,4 @@ cmake .. -DEMsoft_SDK=$BUILDDIR/EMsoft_SDK -DCMAKE_BUILD_TYPE=Release -DBUILD_SH
 make -j 2
 
 cd $BASE
-#rm -rf $TMPDIR
+rm -rf $TMPDIR
